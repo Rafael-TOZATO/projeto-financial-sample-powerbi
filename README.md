@@ -1,9 +1,25 @@
+<p align="center">
+  <img src="star-schema-power-bi-modelagem-dimensional-banner.png" alt="Star Schema Power BI Modelagem Dimensional Banner" width="100%">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-AI%20Engineer-success?style=for-the-badge&logo=git" alt="Status">
+  <img src="https://img.shields.io/badge/Qualidade-ISO%209001-blue?style=for-the-badge&logo=checkmarx&logoColor=white" alt="ISO 9001">
+  <img src="https://img.shields.io/badge/Governança-Indústria%204.0-orange?style=for-the-badge&logo=databricks&logoColor=white" alt="Indústria 4.0">
+  <img src="https://img.shields.io/badge/Python-%20AI-yellow?style=for-the-badge&logo=python&logoColor=white" alt="Python & IA">
+  <img src="https://img.shields.io/badge/Lean%20Six%20Sigma-Green%20Belt-purple?style=for-the-badge&logo=ercot&logoColor=white" alt="Lean Six Sigma">
+</p>
+
 # 📊 Financial Sample — Modelagem Dimensional com Power BI
+
+> **AI Engineer | Especialista em Governança 4.0 e Qualidade | Engenheiro Químico**  
+> [Mauá, SP](mailto:ornelas.tozato@gmail.com) | [LinkedIn](https://www.linkedin.com/in/rafaeltozato81) | [GitHub](https://github.com/Rafael-TOZATO) | [Portfólio PWA](https://tozato-dev-hub.vercel.app) | [Medium](https://medium.com/@ornelas.tozato)
 
 ![Status](https://img.shields.io/badge/Status-Concluído-success)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Data%20Analytics-F2C811?logo=powerbi&logoColor=black)
 ![Projeto](https://img.shields.io/badge/Projeto-DIO-blue)
 ![Modelo](https://img.shields.io/badge/Modelo-Star%20Schema-orange)
+![Branch Protection](https://img.shields.io/badge/branch%20protection-active-success)
 
 ## Sobre o projeto
 
@@ -27,15 +43,10 @@ O objetivo foi transformar uma tabela única de origem em um modelo dimensional 
 O projeto foi estruturado com as seguintes tabelas:
 
 ### `Financials_origem`
-
-Tabela original utilizada como base para a construção do modelo.
-
-Foi mantida no projeto como **backup e referência**, permanecendo oculta no modelo final.
+Tabela original utilizada como base para a construção do modelo. Foi mantida no projeto como **backup e referência**, permanecendo oculta no modelo final.
 
 ### `D_Produtos`
-
 Dimensão responsável pelas informações consolidadas dos produtos, incluindo:
-
 - ID do produto
 - Produto
 - Média de unidades vendidas
@@ -45,9 +56,7 @@ Dimensão responsável pelas informações consolidadas dos produtos, incluindo:
 - Valor mínimo de venda
 
 ### `D_Produtos_Detalhes`
-
 Contém informações detalhadas relacionadas aos produtos:
-
 - ID do produto
 - Discount Band
 - Sale Price
@@ -55,27 +64,19 @@ Contém informações detalhadas relacionadas aos produtos:
 - Manufactoring Price
 
 ### `D_Descontos`
-
 Dimensão relacionada às informações de desconto:
-
 - ID do produto
 - Discount
 - Discount Band
 
 ### `D_Detalhes`
-
 Tabela destinada às informações complementares que não foram contempladas nas demais dimensões, permitindo preservar detalhes relevantes da base original.
 
 ### `D_Calendário`
-
-Dimensão de calendário criada utilizando **DAX**, por meio da função `CALENDAR()`.
-
-A dimensão permite estruturar informações temporais para análises baseadas em datas.
+Dimensão de calendário criada utilizando **DAX**, por meio da função `CALENDAR()`. A dimensão permite estruturar informações temporais para análises baseadas em datas.
 
 ### `F_Vendas`
-
 Tabela fato responsável por concentrar os principais registros utilizados na análise de vendas, incluindo:
-
 - ID do produto
 - Produto
 - Units Sold
@@ -96,7 +97,6 @@ O modelo foi organizado seguindo o conceito de **Star Schema**, mantendo a tabel
 ## Processo de construção
 
 O desenvolvimento foi realizado seguindo as etapas propostas no desafio:
-
 1. Importação da base Financial Sample.
 2. Criação de cópias da tabela original.
 3. Seleção das colunas necessárias para cada dimensão.
@@ -115,7 +115,6 @@ O desenvolvimento foi realizado seguindo as etapas propostas no desafio:
 ## Power Query
 
 Durante o processo de transformação foram realizados tratamentos como:
-
 - definição dos tipos de dados;
 - conversão de campos para texto, número e data;
 - organização das colunas;
@@ -134,58 +133,3 @@ CALENDAR(
     MIN(F_Vendas[Date]),
     MAX(F_Vendas[Date])
 )
-```
-
-A função `CALENDAR()` foi utilizada para criar uma tabela contendo o intervalo de datas necessário para a análise temporal do projeto.
-
-## Desafio técnico e solução adotada
-
-O roteiro original propunha a utilização do **MySQL Azure** como parte do processo de integração.
-
-Durante a execução do projeto, houve uma limitação relacionada ao processo de acesso ao ambiente Azure, que exigia uma etapa de assinatura com cartão de crédito.
-
-Para não interromper o desenvolvimento, foi adotada uma abordagem alternativa utilizando **XAMPP, MySQL e phpMyAdmin**, permitindo trabalhar com a estrutura dos dados localmente e prosseguir com a preparação e transformação da base no Power BI.
-
-Essa adaptação permitiu manter o foco nos principais objetivos técnicos do desafio: **tratamento de dados, modelagem dimensional, criação do Star Schema e utilização do Power BI**.
-
-## Resultado
-
-O resultado é um modelo dimensional estruturado para análise dos dados da Financial Sample, com separação entre dimensões e fato e documentação do processo de construção.
-
-O projeto demonstra conhecimentos práticos em:
-
-- Power BI;
-- Power Query;
-- DAX;
-- modelagem dimensional;
-- Star Schema;
-- transformação de dados;
-- organização de bases para Business Intelligence.
-
-## Arquivos do projeto
-
-```text
-Projeto_Financial_Sample_PowerBI/
-│
-├── Projeto_Financial_Sample_PowerBI.pbix
-├── README.md
-│
-└── docs/
-    └── modelo_estrela_power_bi.jpg
-```
-
-## Portfólio profissional
-
-**Portfólio:**  
-https://tozato-dev-hub.vercel.app
-
-**Medium:**  
-https://medium.com/@ornelas.tozato
-
-## Sobre
-
-Projeto desenvolvido como parte da formação prática em **Data Analytics e Business Intelligence**, com foco em modelagem de dados, transformação e construção de modelos analíticos utilizando Power BI.
-
----
-
-**Projeto desenvolvido por Rafael Ornelas Tozato**

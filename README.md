@@ -133,3 +133,10 @@ CALENDAR(
     MIN(F_Vendas[Date]),
     MAX(F_Vendas[Date])
 )
+
+## Contato
+
+- LinkedIn: [linkedin.com/in/rafael-tozato](https://linkedin.com/in/rafael-tozato)
+- GitHub: [github.com/Rafael-TOZATO](https://github.com/Rafael-TOZATO)
+- Medium: [medium.com/@rafael.tozato](https://medium.com/@rafael.tozato)
+- Aurora BI: [aurora-bi-dio.lovable.app](https://aurora-bi-dio.lovable.app)
